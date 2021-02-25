@@ -19,10 +19,9 @@ def main() -> None:
             laundry_quantity = 0
 
     machine = WashingMachine()
-    number_of_machines = 0
-    machine_capacity = 0
-    while machine_capacity < laundry_quantity:
-        machine_capacity += machine.capacity
+    number_of_machines = laundry_quantity // machine.capacity
+
+    if number_of_machines * machine.capacity < laundry_quantity:
         number_of_machines += 1
 
     print("You will need " + str(number_of_machines) + " washing machines to wash your laundry!")

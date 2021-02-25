@@ -1,4 +1,6 @@
 # coding: utf-8
+import time
+import os
 
 __author__ = 'Eric-Nicolas'
 
@@ -11,17 +13,20 @@ class WashingMachine:
         self._WATER_CONSUMPTION = 60  # in L
 
     @property
-    def capacity(self):
+    def capacity(self) -> int:
         return self._capacity
     
     @property
-    def spinning_speed(self):
+    def spinning_speed(self) -> int:
         return self._spinning_speed
 
     @property
-    def full_wash_time(self):
+    def full_wash_time(self) -> int:
         return self._full_wash_time
     
     @property
-    def water_consumption(self):
+    def water_consumption(self) -> int:
         return self._WATER_CONSUMPTION
+
+    def start(self, weight) -> None:
+        pass
